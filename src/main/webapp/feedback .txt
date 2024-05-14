@@ -1,0 +1,7 @@
+For me todo:
+Check the responisiveness of the application again - 
+	- Carousels,
+	- Cart page,
+	- Size of cards on small devices
+	- Top typewriter -> remove flex for container?
+	- Footer...

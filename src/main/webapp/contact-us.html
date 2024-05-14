@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Contact Us</title>
+    <link rel="icon" href="./assets/images/favicon.ico">
+
+    <!-- Own styles: -->
+    <link rel="stylesheet" href="./css/main_style.css">
+    <link rel="stylesheet" href="./css/fonts.css">
+
+    <!-- Bootstrap link:  -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <!-- <link rel="stylesheet" href="/css/bootstrap.min.css"> -->
+
+    <!-- Slick CSS: -->
+    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick-theme.css"/>
+    
+    <!-- Jquery: -->
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    
+    <!-- Font awesome icons: -->
+    <script src="https://kit.fontawesome.com/a693aed684.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <!-- Nav bar: -->
+    <header>
+        <nav class="navbar navbar-expand-sm header-main-nav">
+            <!-- Banner icon: -->
+            <div class="maven-img navbar-brand">
+                <a href="./index.html">
+                    <img src="./assets/images/maven_academy_logo.png" alt="The Maven Academy">
+                </a>
+            </div>
+            <!-- Toggle on collapse button: -->
+            <button class="navbar-toggler toggler-example" type="button" data-toggle="collapse" data-target="#navbarTopNav" aria-controls="navbarTopNav" aria-expanded="false" aria-label="Toggle navigation"><span class="text-light"><i class="fas fa-bars fa-1x"></i></span></button>
+            
+            <!-- Rest of nav: -->
+            <div class="collapse navbar-collapse" id="navbarTopNav">
+                <div class="d-flex justify-content-end ml-auto">
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a href="./index.html" class="nav-link ml-4">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="./all-courses.html" class="nav-link ml-4">Courses</a>
+                        </li>
+                        <li class="nav-item active">
+                            <a href="./contact-us.html" class="nav-link ml-4">Contact Us</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="./cart.html" class="nav-link ml-4">Cart</a>
+                        </li>
+                        <!-- Cart icon and associative dropdown functionality: -->
+                        <li class="navbar-brand">
+                            <!-- Icon and badge -->
+                            <a class="cart-wrapper-a" disabled href="./cart.html">
+                                <div id="cartDiv" class="bg-dark text-center dropdown">
+                                    <a type="button" id="dropdownMenu" class="text-dark align-middle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" data-offset="10,20"><i class="fas fa-shopping-basket text-light"></i><span id="badge" class="badge badge-light">0</span></a>
+                                    <!-- Dropdown menu: -->
+                                    <div class="dropdown-menu dropdown-menu-right cart-font" aria-labelledby="dropdownMenu"> <!-- 'd-none d-md-block' : dropdown unavailable when on small screen -->
+                                        <div id="coursesContainer">
+                                            <!-- Standard items to appear: -->
+                                            <div class="dropdown-item">
+                                                <a class="row float-right" id="closeCartBtn"><i class="far fa-times-circle"></i></a>
+                                                <h3 class="row mt-3 cart-title-font" href="#">Cart</h3>
+                                                <small class="row">Items</small>
+                                            </div>
+
+                                            <div class="dropdown-divider"></div>
+                                            <!-- Where the courses go: -->                                            
+                                        </div>
+                                        <div id="viewBasketDiv" class="text-center mt-4"></div>
+                                    </div>
+                                </div>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Main section: -->
+    <main class="bg-dark-sky-a pt-4 pb-5">
+        <!-- Little sticky cart: -->
+        <!-- <div id="stickyCartDiv" class="bg-light text-center dropdown">
+            <a href="#" id="dropdownMenuSticky" class="text-dark align-middle" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            <i class="fas fa-shopping-basket"></i><span id="stickyBadge" class="badge badge-light">0</span>
+            </a>
+            <div id="stickyCart" class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenuSticky">
+                <div id="stickyCartContainer">
+                    <div class="dropdown-item">
+                        <a class="row float-right" id="closeCartBtn"><i class="far fa-times-circle"></i></a>
+                        <h3 class="row mt-3 cart-title-font" href="#">Cart</h3>
+                        <small class="row">Items</small>
+                    </div>
+
+                    <div class="dropdown-divider"></div>
+                </div>
+                <div id="viewStickyBasketDiv" class="text-center mt-4"></div>
+            </div>
+        </div> -->
+
+        <!-- Top welcome part: -->
+        <section class="container-fluid d-flex flex-column">
+            <!-- Heading: -->
+            <article class="row d-flex flex-column justify-content-center">
+                <h1 class="main-headings text-center display-4">Get in touch with us</h1>
+            </article>
+
+            <!-- Main image: -->
+            <article class="row d-flex justify-content-center">
+                <img id="topImg" src="./assets/images/contact-banner@3x.png" alt="">
+            </article>
+
+            <!-- Below-image text: -->
+            <article class="row d-flex justify-content-center mt-5">
+                <h2 id="subHeadingText">Get pumped, get skilled</h2>
+            </article>
+        </section>
+
+        <section>
+            <div class="container">
+                <div class="row">
+                    <div class="col p-5">
+                        <h1>The Maven Academy</h1>
+                        <p><strong> Address: </strong></p>
+                        <p>Office F01A, Brookside Office Park, 11 Imam Haron Road, <br>
+                            Claremont, Western Cape, 7708</p>
+                        <p><strong>Say Hello</strong></p>
+                        <p><a href="mailto:hello@themavenacademy.one?Subject=I would like to know more about..." class="mail-link" target="_top">hello@themavenacademy.one</a></p>
+                        <p>
+                            Or call us directly on
+                            <a href="tel:+27 21 461 68 17" class="phone-link"><strong>+27 21 461 68 17 </strong></a>
+                        </p>
+                        <p>Schedule a call with one of our friendly course consultants and <br>
+                            we’ll get back to you within 24 hours.</p>
+                    </div>
+                    <div class="col bg-dark-sky-a p-5">
+                        <p><strong>Send us an enquiry</strong></p>
+                        <p>Schedule a call with one of our friendly course consultants and we’ll get back to you within 24 hours. </p>
+                        <form action="" method="post">
+                            <input class="form-control mb-3" type="text" placeholder="Your name">
+                            <input class="form-control mb-3" type="text" placeholder="Your surname">
+                            <input class="form-control mb-3" type="email" placeholder="Your email">
+                            <input class="form-control mb-3" type="text" placeholder="Your contact number">
+                            <textarea class="form-control mb-3" name="enquireTextArea" cols="80" rows="3"></textarea>
+                            <div class="text-right">
+                                <button>Send Enquiry</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+
+    <!-- Footer: -->
+    <footer id="footer" class="container-fluid">
+        <div class="row row-cols-1 row-cols-md-2 row-cols-lg-4 ml-5">
+            <div class="footer-nav-general col">
+                <a class="title-bottom-nav" href="">GENERAL</a>
+                <a href=""><p class="bottom-nav ">Home</p></a>
+                <a href=""><p class="bottom-nav">Faq</p></a>
+            </div>
+            <div class="footer-nav-general col">
+                <a class="title-bottom-nav active-link" href="">WHY US</a>
+                <p class="bottom-nav">Why study with us?</p>
+                <p class="bottom-nav">Financial Aid - Study for just R1</p>
+                <p class="bottom-nav">Internship - work, learn & earn</p>
+            </div>
+            <div class="footer-nav-general col">
+                <a class="title-bottom-nav active-link" href="">DEVELOPER COURSES</a>
+                <a href=""><p class="bottom-nav">Full Stack Web Developer</p></a>
+            </div>
+            <div class="footer-nav-general col pr-5">
+                <p class="title-bottom-nav">CONTACT US</p>
+                <div class="address">
+                    <ul>
+                        <li class="d-flex  justify-content-start align-items-center">
+                            <img class="footer-nav-imgs mr-3" src="./assets/images/phone-icon.svg" alt="">
+                            <h4 class="pb-2 text-light"><strong>+27 21 461 6817</strong></h4>
+                        </li>
+                        <li class="d-flex  justify-content-start align-items-center">
+                            <img class="footer-nav-imgs mr-3" src="./assets/images/email-icon.svg" alt="">
+                            <a class="bottom-nav pb-2 text-light">hello@mavenacademy.one</a>
+                        </li>
+                        <li class="d-flex  justify-content-start align-items-center mb-0">
+                            <img class="footer-nav-imgs mr-3" src="./assets/images/location-icon.svg" alt="">
+                            <p class="bottom-nav ">Office F01A, Brookside Office Park, 11 Imam Haron Road, Claremont, Western Cape, 7708</p>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bottom most footer: -->
+    <footer id="bottomBlackFooter" class="container-fluid">
+        <div class="row d-flex justify-content-between pl-5 pr-5">
+            <div>
+                <p id="rightsReserved">All Rights Reserved. Maven Academy (Pty) Ltd.</p>
+            </div>
+            <div>
+                <a href=""><img class="bot-nav-socials" src="./assets/images/facebook.svg" alt="Facebook"></a>
+                <a class="ml-2" href=""><img class="bot-nav-socials" src="./assets/images/twitter.svg" alt="Twitter"></a>
+                <a class="ml-2" href=""><img class="bot-nav-socials" src="./assets/images/instagram.svg" alt="Insta"></a>
+            </div>
+        </div>
+    </footer>
+
+
+    <!-- Scripts: -->
+    <script type="text/javascript" src="./js/courses.js"></script>
+    <!-- <script type="text/javascript" src="./js/sticky-cart.js"></script> -->
+
+    <!-- Bootstrap: -->
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+</body>
+</html>
