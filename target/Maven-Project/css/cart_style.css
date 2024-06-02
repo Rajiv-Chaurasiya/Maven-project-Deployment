@@ -1,0 +1,16 @@
+:root {
+  font-size: 16px;
+  --charcoal-grey: #343d42;
+  --dark-sky-blue: #5b9de3;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+@media all and (max-width: 540px) {
+  .remove {
+    display: none;
+  }
+}

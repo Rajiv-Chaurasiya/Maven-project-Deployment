@@ -1,0 +1,441 @@
+:root {
+  font-size: 16px;
+  --charcoal-grey: #343d42;
+  --dark-sky-blue: #5b9de3;
+  --dark-sky-blue-8: rgba(91, 157, 227, 0.08);
+}
+
+html {
+  /* Make the scroll smooth when linking to same page */
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+.hide {
+  display: none;
+}
+
+.show {
+  display: block;
+}
+
+.bg-dark-sky-a {
+  background-color: var(--dark-sky-blue-8);
+}
+
+.color-blue {
+  color: var(--dark-sky-blue);
+}
+
+/* NAV BAR */
+header {
+  position: sticky;
+  top: 0;
+  z-index: 2;
+  background-color: var(--charcoal-grey);
+}
+
+.navbar-nav .nav-link{
+  padding-left: 0 !important;
+  padding-right: 0 !important;
+}
+
+.navbar-nav .active .nav-link::after{
+  content: '';
+  display: block;
+  border-bottom: 2px solid var(--dark-sky-blue);
+}
+
+.navbar-nav .nav-item:not(.active) .nav-link::after{
+  content: '';
+  display: block;
+  width: 0;
+  border-bottom: 2px solid var(--dark-sky-blue);
+  transition: 200ms ease-in-out;
+}
+
+.navbar-nav .nav-item:not(.active) .nav-link:hover::after{
+  content: '';
+  display: block;
+  width: 100%;
+}
+
+.nav-item {
+  margin-top: 8px;
+  /* white-space: nowrap; */
+}
+
+#badge {
+  border-radius: 50%;
+  font-size: x-small;
+  position: absolute;
+}
+
+#cartDiv {
+  border-radius: 50%;
+  height: 40px;
+  width: 40px;
+}
+
+/* Dropdown menu for cart icon: */
+.dropdown-menu {
+  margin-top: 14px !important;
+}
+
+.dropdown-item:hover {
+  background-color: inherit !important;
+}
+
+.dropdown-item:active {
+  color: inherit !important;
+  background-color: inherit !important;
+}
+
+.fa-times {
+  opacity: 0.2;
+}
+
+.fa-times:hover {
+  opacity: 0.8;
+}
+
+/* STICKY CART - No longer used*/
+/* #stickyCartDiv {
+  border-radius: 50%;
+  height: 40px;
+  width: 40px;
+  position: sticky;
+  top: 0;
+  margin-left: auto;
+  margin-right: 1.3rem;
+  z-index: 1;
+} */
+
+/* All buttons: */
+button {
+  padding: 10px 70px 10px 70px;
+  border: #5b9de3;
+  color: var(--dark-sky-blue);
+  border-style: solid;
+  border-width: 2px;
+  border-radius: 30px !important;
+  white-space: nowrap; /* Stops text from wrapping */
+  background-color: inherit;
+  transition: 0.3s;
+}
+
+button:hover {
+  transition: 0.3s;
+  background-color: #5b9de3;
+  color: white;
+}
+
+.next-btn {
+  width: 38px;
+}
+.next-btn:hover {
+  cursor: pointer;
+}
+
+/* All lists: */
+ul {
+  margin: 0;
+  padding: 0;
+  list-style-type: disc;
+}
+
+li {
+  list-style-type: none;
+  /* flex-direction: column; */
+}
+
+/* Top Area: */
+#top {
+  background-color: rgba(91, 157, 227, 0.08);
+  padding-bottom: 40px;
+}
+
+#topImg {
+  width: 514px;
+  height: 364px;
+}
+
+/* Heading text (effects in js): */
+.typewrite {
+  margin: 10px 0;
+  color: var(--dark-sky-blue);
+  font-weight: bolder;
+}
+
+#findOutMoreBtn {
+  background-color: #5b9de3;
+  transition: 0.3s;
+}
+#findOutMoreBtn:hover {
+  transition: 0.3s;
+  background-color: inherit;
+  color: var(--dark-sky-blue);
+}
+
+/* Middle Area  */
+/* Left middle area - Why Maven*/
+
+#readMoreBtn {
+  font-size: 12px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.5;
+  letter-spacing: normal;
+  text-align: center; 
+
+  padding-left: 40px;
+  padding-right: 40px;
+}
+
+/* Right Middle Area - Reasons Maven */
+.aside-divs {
+  height: auto;
+}
+
+.aside-reason-imgs {
+  width: 75px;
+  height: 75px;
+  background-color: #5b9de3;
+  border-radius: .5rem;
+  padding: 12px;
+  margin: 20px 0px 10px
+}
+
+.reason-aside-heading-text {
+  line-height: 24px;
+  font-size: 22px;
+}
+
+.reason-aside-body-text {
+  line-height: 18px;
+  font-size: 16px;
+  /* white-space: nowrap; */
+}
+
+#reasonsMaven {
+  padding: 50px 60px 50px 40px;
+}
+
+
+/* OUR COURSES section */
+#ourCoursesSection {
+  background-color: rgba(91, 157, 227, 0.08);
+}
+
+#ourCoursesContainer {
+  padding: 40px 30px 20px 30px;
+}
+
+.card {
+  /* width: 328px; */
+  /* min-width: 100%; */
+  min-width: 200px;
+  min-height: 490px;
+  max-width: 328px;
+  /* margin: 0 50px; */
+  transition: transform .2s;
+}
+
+.card:hover {
+  transform: scale(1.02);
+  /* border-radius: 10px; */
+  box-shadow: 10px 10px 5px var(--dark-sky-blue-8);
+}
+
+.course-buttons {
+  padding: 10px 0px 10px 0px;
+}
+
+.card-course-detail-a {
+  color: var(--charcoal-grey);
+}
+.card-course-detail-a:hover {
+  color: var(--charcoal-grey);
+}
+
+/* Dummy Cards: */
+/* .dummy_cards{
+  min-height: ;
+} */
+
+.dummy_cards::before {
+  content:"";
+  position:absolute;
+  background: url(../assets/images/comming-soon.svg) no-repeat top right;
+  background-color: rgba(255, 255, 255, 0.6);
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  top: 0;
+  left: 0;
+}
+
+/* CAREER SERVICES SECTION */
+#careerServicesSection {
+  margin-top: 40px;
+  margin-bottom: 20px;
+}
+
+#zondoLogo {
+  height: 30px;
+}
+
+.customer-logos img {
+  filter: grayscale(100%);
+  transition: 0.3s;
+}
+
+.customer-logos img:hover {
+  filter: grayscale(20%);
+  transition: 0.3s;
+}
+
+.career-find-out-more-btn {
+  color: #36414c;
+  background-color: white;
+  border-color: #5b9de3;
+  border-radius: 2rem;
+  padding: 0.6rem 1.5rem 0.6rem 1.5rem;
+  box-shadow: 0;
+}
+
+.career-find-out-more-btn:hover {
+  color: white;
+  background-color: #5b9de3;
+  border-color: white;
+}
+
+/* WHAT STUDENTS THINK SECTION: */
+#studentsThinkSection {
+  background-color: #36414c;
+  color: white;
+  padding: 40px 30px 40px 30px;
+}
+
+#studentThinkImg {
+  width: 756px;
+  /* max-width: 500px; */
+}
+
+.name-link {
+  margin-left: -13px;
+}
+
+/* THANKS FOR ENQUIRY SECTION: */
+#thanksImg {
+  width: 400px;
+}
+
+.faq-a {
+  text-decoration-line: underline;
+  font-weight: normal;
+  color: #60a0e3;
+}
+
+.faq-a:hover {
+  text-decoration: none;
+  color: #60a0e3;
+}
+
+.thanks-contact-faq-num {
+  color: #60a0e3;
+}
+
+/* FOOTER: */
+#footer {
+  /* height: 20rem; */
+  background-color: #36414c;
+  padding-bottom: 50px;
+}
+
+.footer-nav-general {
+  margin-top: 30px;
+  /* width: 0; */
+  /* margin: 1rem 12.5% 2rem 12.5%; */
+  /* padding: 2rem; */
+  /* float: left; */
+}
+
+.address ul li {
+  display: flex;
+  align-items: flex-start;
+  width: 100%;
+  margin-bottom: 30px;
+}
+
+
+/* Bottom most footer: */
+#bottomBlackFooter{
+  background-color: #1F262D;
+  padding: 40px;
+}
+
+#rightsReserved {
+  margin: 0;
+}
+
+.bot-nav-socials {
+  background-color: var(--dark-sky-blue);
+  padding: 5px;
+  border-radius: 5px;
+}
+
+/* ALL-COURSES.html: PAGE */
+
+#allCoursesMain {
+  background-color: var(--charcoal-grey);
+}
+
+/* CONTACT-US.html PAGE */
+.form-control {
+  border-radius: 22px !important;
+}
+
+.mail-link {
+  text-decoration-line: underline;
+  font-weight: normal;
+  color: var(--charcoal-grey);
+}
+
+.mail-link:hover {
+  color: #60a0e3;
+}
+
+.phone-link {
+  color: #60a0e3;
+}
+.phone-link:hover {
+  text-decoration-line: none;
+  color: #60a0e3;
+}
+
+/* All images to be removed: */
+@media all and (max-width: 540px) {
+  #studentThinkImg {
+    display: none;
+  }
+
+  #topImg {
+    display: none;
+  }
+
+  #thanksImg {
+    display: none;
+  }
+}
+
+@media all and (max-width: 575px) {
+  .dropdown-menu {
+    display: none !important;
+  }
+}
